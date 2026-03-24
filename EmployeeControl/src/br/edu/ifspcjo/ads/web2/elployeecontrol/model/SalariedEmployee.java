@@ -1,0 +1,29 @@
+package br.edu.ifspcjo.ads.web2.elployeecontrol.model;
+
+public class SalariedEmployee extends Employee{
+
+	private double salary;
+	
+	public SalariedEmployee(String name, String cpf, double salary) {
+		super(name, cpf);
+		this.salary = salary;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	@Override
+	public String toString() {
+		return "Empregado Assalariado [Salario = R$" + salary + ", Nome = " + name + ", CPF = " + cpf + " ]";
+	}
+
+	public double calculateIncome() {
+		return salary;
+	}
+	
+}
